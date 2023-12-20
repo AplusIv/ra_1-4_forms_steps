@@ -2,14 +2,7 @@
 import pencil from '../assets/pencil.png';
 
 
-const Step = ({data: {date, steps}, onClick, onEdit}) => {
-  // const stepId = nanoid();
-  // const handleClick = (id) => {
-  //   // console.log(event);
-  //   console.log(id);
-  // }
-
-  
+const Step = ({data: {date, steps}, onClick, onEdit}) => { 
   return (
     <tr className='columns step-data'>
       <td>{date}</td>

@@ -46,20 +46,12 @@ const Steps = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // setSteps((prevSteps) => [...prevSteps, stepState]); // рабочий вариант
-    // setStepState((prevStepStateValue) => ({...prevStepStateValue, id: nanoid()}))
-
     console.log(stepState);
     
     setSteps((prevSteps) => [...checkDates(prevSteps, stepState)]); // рабочий вариант
 
     // setSteps((prevSteps) => [...prevSteps.sort(sorter)]); // Сортировка массива тренировок. Перезаписываю состояние новым отсорированным массивом
     setSteps((prevSteps) => [...sortArray(prevSteps, sorter)]); // Сортировка массива тренировок. Перезаписываю состояние новым отсорированным массивом
-
-    // console.log(stepState);
-    // setSteps((prevSteps) => <Check dataArray={prevSteps} checkingItem={stepState}/>);
-    console.log(steps);
-    // <Step data={stepState}/>;
 
     // сбросить поля
     setStepState((prevStepStateValue) => ({...prevStepStateValue, date: '', steps: '',}));
